@@ -1,56 +1,48 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Leaderboard
 
-# Project Name
-
-> Description the project.
+> A leaderboard project made with webpack that fetches data from an API.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- Javascript
+- Git
+- Webpack
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+Have latest LTS version of Node installed in your environment.
+
 ### Setup
+
+Clone this repo into your local computer.
 
 ### Install
 
+In your local root folder type 'npm install'
+
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
+Run npm start to start server in your browser.
 
 ## Authors
 
-👤 **Author1**
+👤 **Henry Nawrocki**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@hsztan](https://github.com/hsztan)
+- Twitter: [@hsztanski](https://github.com/hsztan)
+- LinkedIn: [@henry-nawrocki](https://linkedin.com/in/henry-nawrocki)
 
 ## 🤝 Contributing
 
