@@ -58,6 +58,10 @@ input {
   padding: 3px;
 }
 
+#scores-container li:nth-child(odd) {
+  background-color: #e1e1e1;
+}
+
 form {
   display: flex;
   flex-direction: column;
