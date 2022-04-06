@@ -25,12 +25,11 @@ const createGame = async (gameName) => {
   } catch (error) {
     return error.message;
   }
-  return null || { gameID, gameName };
+  return null || gameID;
 };
 
 // returns score if score creation is successfull
 const createScore = async (user, score) => {
-  let scoreObj = null;
   try {
     const response = await fetch(endpoints.scores, {
       method: 'POST',
@@ -44,14 +43,12 @@ const createScore = async (user, score) => {
     });
     if (response.ok) {
       // get game ID
-      const data = await response.json();
-      scoreObj = data;
-      game.scores.push(scoreObj);
+      game.scores.push({ user, score });
     }
   } catch (error) {
     return error.message;
   }
-  return null || scoreObj;
+  return null || { user, score };
 };
 
 // returns score if score creation is successfull
@@ -62,14 +59,12 @@ const getScores = async () => {
     if (response.ok) {
       // get game ID
       const data = await response.json();
-      allScores = data;
+      allScores = data.result;
     }
   } catch (error) {
     return error.message;
   }
-  return null || allScores.result;
+  return null || allScores;
 };
 
-export {
-  createGame, createScore, getScores, endpoints, game,
-};
+export { createGame, createScore, getScores, endpoints, game };
