@@ -15,6 +15,7 @@ const createNewGame = (gameName) => async () => {
   // save game data in globals
   game.name = gameData.gameName;
   game.id = gameData.gameID;
+  console.log(gameData);
   // set sendpoints with given id in globals
   endpoints.scores = `${endpoints.games}${game.id}/scores/`;
 };
@@ -33,7 +34,7 @@ const showAllScores = async () => {
 };
 
 const startApp = async () => {
-  // document.onload = createNewGame.bind('Tic Tac Toe, Find That Foe!');
+  window.onload = createNewGame('Tic Tac Toe, Find That Foe!');
   await createNewGame('Tic Tac Toe, Find That Foe!')();
   await submitNewScore('Henry', 100);
   await submitNewScore('Ron', 20);
