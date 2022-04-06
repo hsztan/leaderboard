@@ -2,7 +2,6 @@ import { endpoints, game } from './globals';
 
 // returns game ID if creation successfull
 const createGame = async (gameName) => {
-  const endpoint = endpoints.games;
   let gameID = null;
   try {
     const response = await fetch(endpoints.games, {
@@ -67,7 +66,7 @@ const getScores = async () => {
   } catch (error) {
     return error.message;
   }
-  return null || allScores;
+  return null || allScores.result;
 };
 
 export { createGame, createScore, getScores, endpoints, game };
