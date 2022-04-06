@@ -70,4 +70,6 @@ const getScores = async () => {
   return null || allScores.result;
 };
 
-export { createGame, createScore, getScores, endpoints, game };
+export {
+  createGame, createScore, getScores, endpoints, game,
+};
