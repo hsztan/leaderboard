@@ -37,6 +37,10 @@ const createNewGame = (gameName) => async () => {
   game.id = gameData.gameID;
   // set sendpoints with given id in globals
   endpoints.scores = `${endpoints.games}${game.id}/scores/`;
+  // set new message in dom
+  const addAScoreLi = document.createElement('li');
+  addAScoreLi.innerText = 'Please Submit a New Score!';
+  scoresContainerUl.appendChild(addAScoreLi);
 };
 
 const showAllScores = async () => {
@@ -64,7 +68,6 @@ const submitNewScore = async (eve) => {
 
 const startApp = async () => {
   window.onload = createNewGame('Tic Tac Toe, Find That Foe!');
-  await createNewGame('Tic Tac Toe, Find That Foe!')();
   addNewScoreForm.onsubmit = submitNewScore;
   getAllScoresBtn.onclick = showAllScores;
 };
