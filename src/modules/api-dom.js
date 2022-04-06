@@ -7,7 +7,7 @@ import {
 } from './api-helpers';
 
 // state
-const state = { scoresCount: 0 };
+const state = { submitted: false };
 
 // DOM elements
 const getAllScoresBtn = document.getElementById('refresh-btn');
@@ -31,11 +31,11 @@ const showSuccessBtn = () => {
 };
 
 const createNewGame = (gameName) => async () => {
-  const gameData = await createGame(gameName);
+  const gameID = await createGame(gameName);
   // save game data in globals
-  game.name = gameData.gameName;
-  game.id = gameData.gameID;
-  // set sendpoints with given id in globals
+  game.name = gameName;
+  game.id = gameID;
+  // set endpoints with given id in globals
   endpoints.scores = `${endpoints.games}${game.id}/scores/`;
   // set new message in dom
   const addAScoreLi = document.createElement('li');
@@ -44,16 +44,15 @@ const createNewGame = (gameName) => async () => {
 };
 
 const showAllScores = async () => {
-  const scores = await getScores();
-  // if there are new scores display them
-  if (scores.length > state.scoresCount) {
-    state.scoresCount = scores.length;
+  if (state.submitted) {
+    const scores = await getScores();
     scoresContainerUl.innerHTML = '';
     scores.forEach((score) => {
       const scoreEle = document.createElement('li');
       scoreEle.innerText = `${score.user}: ${score.score}`;
       scoresContainerUl.appendChild(scoreEle);
     });
+    state.submitted = false;
   }
 };
 
@@ -62,12 +61,13 @@ const submitNewScore = async (eve) => {
   const name = nameInput.value;
   const score = scoreInput.value;
   await createScore(name, score);
+  state.submitted = true;
   // set styles and clear field after successfull submit
   showSuccessBtn();
 };
 
 const startApp = async () => {
-  window.onload = createNewGame('Tic Tac Toe, Find That Foe!');
+  window.onload = createNewGame('Find That Foe!');
   addNewScoreForm.onsubmit = submitNewScore;
   getAllScoresBtn.onclick = showAllScores;
 };
