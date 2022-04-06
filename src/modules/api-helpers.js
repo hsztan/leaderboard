@@ -46,6 +46,7 @@ const createScore = async (user, score) => {
       // get game ID
       const data = await response.json();
       scoreObj = data;
+      game.scores.push(scoreObj);
     }
   } catch (error) {
     return error.message;

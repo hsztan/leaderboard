@@ -6,6 +6,9 @@ import {
   getScores,
 } from './api-helpers';
 
+// state
+const state = { scoresCount: 0 };
+
 // DOM elements
 const getAllScoresBtn = document.getElementById('refresh-btn');
 const scoresContainerUl = document.getElementById('scores');
@@ -15,7 +18,6 @@ const createNewGame = (gameName) => async () => {
   // save game data in globals
   game.name = gameData.gameName;
   game.id = gameData.gameID;
-  console.log(gameData);
   // set sendpoints with given id in globals
   endpoints.scores = `${endpoints.games}${game.id}/scores/`;
 };
@@ -26,11 +28,14 @@ const submitNewScore = async (user, score) => {
 
 const showAllScores = async () => {
   const scores = await getScores();
-  scores.forEach((score) => {
-    const scoreEle = document.createElement('li');
-    scoreEle.innerText = `${score.user}: ${score.score}`;
-    scoresContainerUl.appendChild(scoreEle);
-  });
+  if (scores.length > state.scoresCount) {
+    state.scoresCount = scores.length;
+    scores.forEach((score) => {
+      const scoreEle = document.createElement('li');
+      scoreEle.innerText = `${score.user}: ${score.score}`;
+      scoresContainerUl.appendChild(scoreEle);
+    });
+  }
 };
 
 const startApp = async () => {
