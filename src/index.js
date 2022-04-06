@@ -1,2 +1,4 @@
 import './index.css';
-// Start app
+import startApp from './modules/start-api';
+
+startApp();
