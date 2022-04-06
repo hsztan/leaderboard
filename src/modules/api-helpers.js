@@ -1,17 +1,14 @@
 import { endpoints, game } from './globals';
 
-const TEMP_ID = '0dMPYB8ET7ckKAnmOPlY';
-const scoresEndpoint = `${endpoints.games}${TEMP_ID}/scores/`;
-
 // returns game ID if creation successfull
 const createGame = async (gameName) => {
   const endpoint = endpoints.games;
   let gameID = null;
   try {
-    const response = await fetch(endpoint, {
+    const response = await fetch(endpoints.games, {
       method: 'POST',
       body: JSON.stringify({
-        name: game.name,
+        name: gameName,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -36,7 +33,7 @@ const createGame = async (gameName) => {
 const createScore = async (user, score) => {
   let scoreObj = null;
   try {
-    const response = await fetch(scoresEndpoint, {
+    const response = await fetch(endpoints.scores, {
       method: 'POST',
       body: JSON.stringify({
         user,
@@ -61,7 +58,7 @@ const createScore = async (user, score) => {
 const getScores = async () => {
   let allScores = null;
   try {
-    const response = await fetch(scoresEndpoint);
+    const response = await fetch(endpoints.scores);
     if (response.ok) {
       // get game ID
       const data = await response.json();
