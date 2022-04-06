@@ -1,4 +1,4 @@
 import './index.css';
-import startApp from './modules/start-api';
+import startApp from './modules/api-dom';
 
 startApp();
