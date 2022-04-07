@@ -85,11 +85,18 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
+.leaderboard .reload-icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 2rem;
+}
+
 .leaderboard .title {
   position: absolute;
   z-index: 2;
   top: 50%;
-  right: calc(var(--start) * .75);
+  right: calc(var(--start) * 1.7);
   transform: translateY(-50%);
   text-transform: uppercase;
   margin: 0;
@@ -97,6 +104,12 @@ h2 {
 
 .leaderboard .title span {
   display: block;
+}
+
+.leaderboard .title--reload {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 6.5px;
 }
 
 .leaderboard .title--top {
