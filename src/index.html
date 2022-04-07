@@ -4,20 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/cf7c041e9c.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Leaderboard</title>
   </head>
   <body>
     <h1 id="main-title">Leaderboard</h1>
     <main>
+      <!-- Leaderboard -->
       <section class="recent-scores">
         <div class="title-wrapper section-title">
           <h2>Recent scores</h2>
           <button id="refresh-btn" class="btn" type="button">Refresh</button>
         </div>
-        <div id="scores-container">
-          <ul id="scores"></ul>
+        <!-- Main Board -->
+        <div id="scores-container" class="leaderboard">
+          <div class="header">
+            <span class="icon"><i class="fa-solid fa-trophy"></i></span>
+            <h1 class="title">
+              <span class="title--top">HENRY'S</span
+              ><span class="title--bottom">LEADERBOARD</span>
+            </h1>
+          </div>
+          <ul id="scores">
+            <li class="profile">
+              <img src="https://robohash.org/YOUR-TEXT.png" alt="robot" />
+              <span class="name">Henry</span>
+              <span class="score">150</span>
+            </li>
+            <li class="profile">
+              <img src="https://robohash.org/YOUR.png" alt="robot" />
+              <span class="name">Henry</span>
+              <span class="score">150</span>
+            </li>
+          </ul>
         </div>
       </section>
+      <!-- Add Score -->
       <section class="add-score">
         <h2 class="section-title">Add your score</h2>
         <form id="add-score-form">

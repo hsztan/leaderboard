@@ -6,6 +6,12 @@
 
 body {
   font-size: 1rem;
+  margin: 0;
+  background-color: #eaeaea;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 {
@@ -19,6 +25,68 @@ h2 {
 #main-title {
   padding: 1rem 0 0 1rem;
 }
+
+/* Main styles */
+
+:root {
+  --start: 15%;
+}
+
+.leaderboard {
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
+  max-width: 490px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.leaderboard .header {
+  height: 130px;
+  background: repeating-radial-gradient(circle at var(--start), transparent 0%, transparent 10%, rgba(54, 89, 219, .33) 10%, rgba(54, 89, 219, .33) 17%),
+  linear-gradient(to right, #5b7cfa, #3659db);
+  color: #fff;
+  position: relative;
+  border-radius: 12px 12px 0 0;
+}
+
+.leaderboard .icon {
+  fill: #fff;
+  opacity: .35;
+  font-size: 4vw;
+  position: absolute;
+  top: 50%;
+  left: var(--start);
+  transform: translate(-50%, -50%);
+}
+
+.leaderboard .title {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: calc(var(--start) * .75);
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.leaderboard .title span {
+  display: block;
+}
+
+.leaderboard .title--top {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 6.5px;
+}
+
+.leaderboard .title--bottom {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3.55px;
+  opacity: .65;
+  transform: translateY(-2px);
+}
+
+/* Main styles */
 
 ul {
   list-style: none;
