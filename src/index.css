@@ -33,13 +33,6 @@ h2 {
   gap: 0.5rem;
 }
 
-.btn {
-  background-color: #fff;
-  border: 2px solid black;
-  box-shadow: 2px 2px 2px;
-  padding: 2px 5px;
-}
-
 .section-title {
   padding-bottom: 1rem;
 }
@@ -184,17 +177,14 @@ h2 {
 
 /* Form styles */
 
+#add-score-form {
+  border-radius: 0;
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
-}
-
-.add-score {
-  padding: 0.5rem 0;
-  margin: 1rem auto;
-  box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
-  width: 200px;
-  border-radius: 12px;
+  align-items: center;
 }
 
 .section-score-title {
@@ -202,13 +192,26 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
+#add-message {
+  text-align: center;
+}
+
+.btn {
+  background-color: #fff;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px;
+  padding: 2px 10px;
+  border-radius: 15px;
+}
+
 ul {
   list-style: none;
 }
 
 input {
-  border: 1px solid black;
-  border-radius: 15px;
+  margin-bottom: 0.3rem;
+  border: none;
+  border-bottom: 1px solid black;
 }
 
 input::placeholder {
@@ -221,9 +224,4 @@ form {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-}
-
-#submit {
-  display: block;
-  width: 70px;
 }
