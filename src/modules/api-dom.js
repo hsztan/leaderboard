@@ -37,19 +37,6 @@ const createNewGame = (gameName) => async () => {
   game.id = gameID;
   // set endpoints with given id in globals
   endpoints.scores = `${endpoints.games}${game.id}/scores/`;
-  // set new message in dom
-  const addAScoreLi = document.createElement('li');
-  addAScoreLi.classList.add('profile');
-  addAScoreLi.innerHTML = `
-        <img
-          class="picture"
-          src="https://robohash.org/blahblah.png"
-          alt="robot"
-        />
-        <span class="name">Please enter a score!</span>
-        <span class="score"></span>
-      `;
-  scoresContainerUl.appendChild(addAScoreLi);
 };
 
 const showAllScores = async () => {

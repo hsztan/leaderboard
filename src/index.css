@@ -140,6 +140,11 @@ h2 {
   box-shadow: 0 9px 47px 11px rgba(51, 51, 51, 0.18);
 }
 
+.leaderboard .profile.override-zoom:hover {
+  transform: none;
+  box-shadow: 0 9px 47px 11px rgba(51, 51, 51, 0.18);
+}
+
 .leaderboard .picture {
   max-width: 100%;
   width: 60px;
@@ -165,6 +170,11 @@ h2 {
 
 
 /* Form styles */
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
 
 .add-score {
   padding: 0.5rem 0;

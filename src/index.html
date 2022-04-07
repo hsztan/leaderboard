@@ -27,22 +27,35 @@
               ><span class="title--bottom">LEADERBOARD</span>
             </h1>
           </div>
-          <!-- <ul class="profiles">
-            <li class="profile form">
-              <img
-                class="picture"
-                src="https://robohash.org/blahblah.png"
-                alt="robot"
+          <form id="add-score-form" class="profile override-zoom">
+            <img
+              class="picture"
+              src="https://robohash.org/blahblah.png"
+              alt="robot"
+            />
+            <div class="input-container">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
               />
-              <span class="name">Please enter a score!</span>
-              <span class="score"></span>
-            </li>
-          </ul> -->
+              <input
+                type="text"
+                id="score"
+                name="score"
+                placeholder="Your score"
+                required
+              />
+            </div>
+            <input id="submit" class="btn" type="submit" value="Submit" />
+          </form>
           <ul id="scores" class="profiles"></ul>
         </div>
       </section>
       <!-- Add Score -->
-      <section class="add-score">
+      <!-- <section class="add-score">
         <h2 class="section-score-title">Add your score</h2>
         <form id="add-score-form">
           <input
@@ -61,7 +74,7 @@
           />
           <input id="submit" class="btn" type="submit" value="Submit" />
         </form>
-      </section>
+      </section> -->
     </main>
   </body>
 </html>
