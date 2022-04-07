@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -34,9 +36,11 @@ h2 {
 
 .leaderboard {
   box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
+  min-width: 350px;
   max-width: 490px;
   width: 100%;
   border-radius: 12px;
+  border: none;
 }
 
 .leaderboard .header {
@@ -133,7 +137,7 @@ h2 {
   color: #35d8ac;
   font-weight: 700;
   font-size: 34px;
-  /* text-align: right; */
+  text-align: right;
 }
 
 
@@ -143,11 +147,11 @@ ul {
   list-style: none;
 }
 
-main {
+/* main {
   display: flex;
   justify-content: space-around;
   padding: 1rem;
-}
+} */
 
 input {
   border: 2px solid black;

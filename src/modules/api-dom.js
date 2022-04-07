@@ -39,7 +39,16 @@ const createNewGame = (gameName) => async () => {
   endpoints.scores = `${endpoints.games}${game.id}/scores/`;
   // set new message in dom
   const addAScoreLi = document.createElement('li');
-  addAScoreLi.innerText = 'Please Submit a New Score!';
+  addAScoreLi.classList.add('profile');
+  addAScoreLi.innerHTML = `
+        <img
+          class="picture"
+          src="https://robohash.org/blahblah.png"
+          alt="robot"
+        />
+        <span class="name">Please enter a score!</span>
+        <span class="score"></span>
+      `;
   scoresContainerUl.appendChild(addAScoreLi);
 };
 
@@ -51,7 +60,7 @@ const showAllScores = async () => {
     scores.forEach((score) => {
       // create li
       const scoreEle = document.createElement('li');
-      scoreEle.className.add('profile');
+      scoreEle.classList.add('profile');
       scoreEle.innerHTML = `
         <img
           class="picture"
