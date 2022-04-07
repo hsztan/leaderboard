@@ -14,17 +14,19 @@
     <main>
       <!-- Leaderboard -->
       <section class="recent-scores">
-        <div class="title-wrapper section-title">
-          <h1>Recent scores</h1>
-          <button id="refresh-btn" class="btn" type="button">Refresh</button>
-        </div>
+        <div class="title-wrapper section-title"></div>
         <!-- Main Board -->
         <div id="scores-container" class="leaderboard">
           <div class="header">
             <span class="icon"><i class="fa-solid fa-trophy"></i></span>
             <h1 class="title">
               <span class="title--top">HENRY'S</span
-              ><span class="title--bottom">LEADERBOARD</span>
+              ><span class="title--bottom">LEADERBOARD</span
+              ><span class="title--bottom"
+                ><button id="refresh-btn" class="btn" type="button">
+                  Refresh
+                </button></span
+              >
             </h1>
           </div>
           <form id="add-score-form" class="profile override-zoom">
@@ -54,27 +56,6 @@
           <ul id="scores" class="profiles"></ul>
         </div>
       </section>
-      <!-- Add Score -->
-      <!-- <section class="add-score">
-        <h2 class="section-score-title">Add your score</h2>
-        <form id="add-score-form">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your name"
-            required
-          />
-          <input
-            type="text"
-            id="score"
-            name="score"
-            placeholder="Your score"
-            required
-          />
-          <input id="submit" class="btn" type="submit" value="Submit" />
-        </form>
-      </section> -->
     </main>
   </body>
 </html>
