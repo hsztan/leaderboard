@@ -14,7 +14,7 @@ const createGame = async () => {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
-      }
+      },
     );
     if (response.ok) {
       // get game ID
@@ -70,4 +70,6 @@ const getScores = async () => {
   return null || allScores;
 };
 
-export { createGame, createScore, getScores, endpoints, game };
+export {
+  createGame, createScore, getScores, endpoints, game,
+};
