@@ -47,9 +47,20 @@ const showAllScores = async () => {
   if (state.submitted) {
     const scores = await getScores();
     scoresContainerUl.innerHTML = '';
+    // display elements on dom
     scores.forEach((score) => {
+      // create li
       const scoreEle = document.createElement('li');
-      scoreEle.innerText = `${score.user}: ${score.score}`;
+      scoreEle.className.add('profile');
+      scoreEle.innerHTML = `
+        <img
+          class="picture"
+          src="https://robohash.org/${score.user}.png"
+          alt="robot"
+        />
+        <span class="name">${score.user}</span>
+        <span class="score">${score.score}</span>
+      `;
       scoresContainerUl.appendChild(scoreEle);
     });
     state.submitted = false;
