@@ -26,7 +26,7 @@ const showSuccessBtn = () => {
   setTimeout(() => {
     submitBtn.style.backgroundColor = '#fff';
     submitBtn.style.color = '#000';
-    submitBtn.value = 'Submit';
+    submitBtn.value = 'Add Score';
   }, 1000);
 };
 
@@ -81,8 +81,8 @@ const animateReloadBtn = () => {
 const startApp = async () => {
   window.onload = createNewGame('Find That Foe!');
   addNewScoreForm.onsubmit = submitNewScore;
-  getAllScoresBtn.onclick = showAllScores;
-  getAllScoresBtn.onclick = animateReloadBtn;
+  getAllScoresBtn.addEventListener('click', showAllScores);
+  getAllScoresBtn.addEventListener('click', animateReloadBtn);
 };
 
 export default startApp;
