@@ -1,18 +1,21 @@
 import { endpoints, game } from './globals';
 
 // returns game ID if creation successfull
-const createGame = async (gameName) => {
+const createGame = async () => {
   let gameID = null;
   try {
-    const response = await fetch(endpoints.games, {
-      method: 'POST',
-      body: JSON.stringify({
-        name: gameName,
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
+    const response = await fetch(
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          name: 'hello world',
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
       },
-    });
+    );
     if (response.ok) {
       // get game ID
       const data = await response.json();
@@ -67,4 +70,6 @@ const getScores = async () => {
   return null || allScores;
 };
 
-export { createGame, createScore, getScores, endpoints, game };
+export {
+  createGame, createScore, getScores, endpoints, game,
+};

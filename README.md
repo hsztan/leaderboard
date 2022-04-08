@@ -56,7 +56,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
-- Inspiration
+- Design credits to: [Ennio Dybeli](https://dribbble.com/shots/2342688-Leaderboard-Day-019-dailyui)
 - etc
 
 ## 📝 License
