@@ -73,10 +73,16 @@ const submitNewScore = async (eve) => {
   showSuccessBtn();
 };
 
+const animateReloadBtn = () => {
+  getAllScoresBtn.classList.add('reloading');
+  setTimeout(() => getAllScoresBtn.classList.remove('reloading'), 3000);
+};
+
 const startApp = async () => {
   window.onload = createNewGame('Find That Foe!');
   addNewScoreForm.onsubmit = submitNewScore;
   getAllScoresBtn.onclick = showAllScores;
+  getAllScoresBtn.onclick = animateReloadBtn;
 };
 
 export default startApp;
