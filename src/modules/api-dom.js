@@ -30,6 +30,10 @@ const showSuccessBtn = () => {
   }, 1000);
 };
 
+const toggleStyleReloadBtn = () => {
+  getAllScoresBtn.classList.toggle('data-ready');
+};
+
 const createNewGame = (gameName) => async () => {
   const gameID = await createGame(gameName);
   // save game data in globals
@@ -60,6 +64,7 @@ const showAllScores = async () => {
       scoresContainerUl.appendChild(scoreEle);
     });
     state.submitted = false;
+    setTimeout(toggleStyleReloadBtn, 3000);
   }
 };
 
@@ -71,6 +76,7 @@ const submitNewScore = async (eve) => {
   state.submitted = true;
   // set styles and clear field after successfull submit
   showSuccessBtn();
+  toggleStyleReloadBtn();
 };
 
 const animateReloadBtn = () => {

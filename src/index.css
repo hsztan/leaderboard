@@ -86,6 +86,17 @@ h2 {
   font-size: 2rem;
 }
 
+.leaderboard .reload-icon.data-ready {
+  color: rgb(254, 127, 0);
+}
+
+.leaderboard .reload-icon:hover {
+  color: #a1a1a1;
+  transform: scale(1.1);
+  border-radius: 50%;
+  background: transparent;
+}
+
 .leaderboard .reload-icon.reloading {
   animation: reload 3s;
   animation-fill-mode: forwards;
